@@ -24,7 +24,7 @@ clean:
 	rm -f $(PROGRAM_PREFIX).c-mpi
 
 run:
-	mpirun -machinefile machines -np 6 ./$(PROGRAM_PREFIX).c-mpi
+	mpirun -np 6 ./$(PROGRAM_PREFIX).c-mpi
 
 # Make rules
 $(PROGRAM_PREFIX).c-mpi: $(SRCS)
