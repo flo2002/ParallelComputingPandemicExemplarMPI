@@ -26,7 +26,7 @@ const int PIXEL_HEIGHT_PER_PERSON = 10;
 #endif
 
 // Default parameters for the simulation
-const int DEFAULT_ENVIRO_SIZE = 30;
+const int DEFAULT_ENVIRO_SIZE = 70;
 const int DEFAULT_RADIUS = 3;
 const int DEFAULT_DURATION = 50;
 const int DEFAULT_CONT_FACTOR = 30;

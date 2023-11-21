@@ -150,6 +150,20 @@ void susceptible(struct global_t *global, struct our_t *our, struct const_t *con
                 stats->our_num_infections++;
                 #endif
             }
+
+            // but also if there is a chance to get infected even if no person is nearby
+            if((random() % 100000) <= 1) 
+            {
+                // The thread changes person1’s state to infected
+                our_states[my_current_person_id] = INFECTED;
+                // The thread updates the counters
+                our->our_num_infected++;
+                our->our_num_susceptible--;
+                // The thread updates stats counter
+                #ifdef SHOW_RESULTS
+                stats->our_num_infections++;
+                #endif
+            }
         }
     }
 }

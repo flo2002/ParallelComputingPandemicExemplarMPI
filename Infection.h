@@ -28,10 +28,8 @@ void find_infected(struct our_t *our)
     {
         if(our->our_states[our_person1] == INFECTED)
         {
-            our->our_infected_x_locations[our_current_infected_person] = 
-            our->our_x_locations[our_person1];
-            our->our_infected_y_locations[our_current_infected_person] =
-            our->our_y_locations[our_person1];
+            our->our_infected_x_locations[our_current_infected_person] = our->our_x_locations[our_person1];
+            our->our_infected_y_locations[our_current_infected_person] = our->our_y_locations[our_person1];
             our_current_infected_person++;
         }
     }
